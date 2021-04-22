@@ -8,6 +8,7 @@ export default {
     admin: KRATOS_ADMIN_URL,
     public: KRATOS_PUBLIC_URL,
     initLoginPath: '/self-service/login/browser',
+    initRegistrationPath: '/self-service/registration/browser',
     logoutPath: '/self-service/browser/flows/logout'
   },
   global: {
