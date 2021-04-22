@@ -76,6 +76,7 @@ services:
       - DB_HOST=mysqld
     networks:
       - intranet
+    restart: on-failure
       
   
 

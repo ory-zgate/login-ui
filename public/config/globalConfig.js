@@ -1,0 +1,3 @@
+window.KRATOS_BROWSER_URL="http://127.0.0.1:4433";
+window.KRATOS_PUBLIC_URL="http://127.0.0.1:4433";
+window.KRATOS_ADMIN_URL="http://127.0.0.1:4434";
