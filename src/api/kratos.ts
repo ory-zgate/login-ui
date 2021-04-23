@@ -8,10 +8,11 @@ const publicApi = new PublicApi(
     baseOptions: { withCredentials: true }
   }));
 
-export const initializeFlow = ({ type }: { type: "login" | "register" }): Promise<LoginFlow> => {
+export const initializeFlow = ({ type }: { type: "login" | "register" | "settings" }): Promise<LoginFlow> => {
   const endpoints = {
     login: `${config.kratos.browser}${config.kratos.initLoginPath}`,
-    register: `${config.kratos.browser}${config.kratos.initRegistrationPath}`
+    register: `${config.kratos.browser}${config.kratos.initRegistrationPath}`,
+    settings: `${config.kratos.browser}${config.kratos.initSettingsPath}`
   }
 
   return new Promise((resolve, reject) => {
@@ -29,6 +30,7 @@ export const initializeFlow = ({ type }: { type: "login" | "register" }): Promis
     let authRequest: Promise<any> | undefined
     if (type === "login") authRequest = publicApi.getSelfServiceLoginFlow(flow)
     if (type === "register") authRequest = publicApi.getSelfServiceRegistrationFlow(flow)
+    if (type === "settings") authRequest = publicApi.getSelfServiceSettingsFlow(flow)
 
     if (!authRequest) return reject()
 
@@ -43,6 +45,7 @@ export const initializeFlow = ({ type }: { type: "login" | "register" }): Promis
 
 export const initializeLoginFlow = () => initializeFlow({type: "login"});
 export const initializeRegisterFlow = () => initializeFlow({type: "register"});
+export const initializeSettingsFlow = () => initializeFlow({type: "settings"});
   
 export const checkSessionValid = () => {
   return publicApi.whoami();

@@ -3,6 +3,7 @@ import Login from '../pages/Login.vue'
 import Logout from '../pages/Logout.vue'
 import ErrorPage from '../pages/Error.vue'
 import Registration from '../pages/Registration.vue'
+import Settings from '../pages/Settings.vue'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [
@@ -18,6 +19,10 @@ export const routes = [
   {
     path: '/auth/registration',
     component: Registration
+  },
+  {
+    path: '/auth/settings',
+    component: Settings
   },
   {
     path: '/error',
