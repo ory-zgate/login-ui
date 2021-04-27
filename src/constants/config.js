@@ -1,5 +1,5 @@
 export const KRATOS_BROWSER_URL = window.KRATOS_BROWSER_URL || "http://127.0.0.1:4433";
-export const KRATOS_PUBLIC_URL = window.KRATOS_PUBLIC_URL || "http://127.0.0.1:4433";;
+export const KRATOS_PUBLIC_URL = window.KRATOS_PUBLIC_URL || "http://127.0.0.1:4433";
 export const KRATOS_ADMIN_URL = window.KRATOS_ADMIN_URL || "http://127.0.0.1:4434";
 
 export default {
