@@ -10,9 +10,9 @@ const publicApi = new PublicApi(
 
 export const initializeFlow = ({ type }: { type: "login" | "register" | "settings" }): Promise<LoginFlow> => {
   const endpoints = {
-    login: `${config.kratos.browser}${config.kratos.initLoginPath}`,
-    register: `${config.kratos.browser}${config.kratos.initRegistrationPath}`,
-    settings: `${config.kratos.browser}${config.kratos.initSettingsPath}`
+    login: `${config.kratos.initLoginPath}`,
+    register: `${config.kratos.initRegistrationPath}`,
+    settings: `${config.kratos.initSettingsPath}`
   }
 
   return new Promise((resolve, reject) => {

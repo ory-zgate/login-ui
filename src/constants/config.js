@@ -7,10 +7,10 @@ export default {
     browser: KRATOS_BROWSER_URL,
     admin: KRATOS_ADMIN_URL,
     public: KRATOS_PUBLIC_URL,
-    initLoginPath: '/self-service/login/browser',
-    initRegistrationPath: '/self-service/registration/browser',
-    initSettingsPath: '/self-service/settings/browser',
-    logoutPath: '/self-service/browser/flows/logout'
+    initLoginPath: KRATOS_BROWSER_URL + '/self-service/login/browser',
+    initRegistrationPath: KRATOS_BROWSER_URL + '/self-service/registration/browser',
+    initSettingsPath: KRATOS_BROWSER_URL + '/self-service/settings/browser',
+    logoutPath: KRATOS_BROWSER_URL + '/self-service/browser/flows/logout',
   },
   global: {
     passwordLoginEnabled: true,
