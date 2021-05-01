@@ -9,19 +9,19 @@ import Settings from '../pages/Settings.vue'
 export const routes = [
   { path: '/', component: Home, meta: { title: 'Home' } },
   {
-    path: '/auth/login',
+    path: '/login',
     component: Login
   },
   {
-    path: '/auth/logout',
+    path: '/logout',
     component: Logout
   },
   {
-    path: '/auth/registration',
+    path: '/registration',
     component: Registration
   },
   {
-    path: '/auth/settings',
+    path: '/settings',
     component: Settings
   },
   {

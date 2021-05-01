@@ -7,7 +7,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const app = createApp(App)
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.NODE_ENV === 'production' ? '/auth/' : '/'),
   routes,
 })
 
