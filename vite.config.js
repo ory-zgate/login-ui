@@ -12,5 +12,5 @@ export default defineConfig({
   server: {
     open: true,
   },
-  base: process.env.NODE_ENV === 'production' ? '/auth/' : '/'
+  base: '/auth/'
 })
