@@ -17,20 +17,20 @@
         <div class="rounded-md shadow-sm -space-y-px">
           <div v-for="field in fields" :key="field">
             <div>
-              <label :for="field.name" class="sr-only">{{field.name}}</label>
+              <label :for="field.attributes.name" class="sr-only">{{field.attributes.name}}</label>
               <input
-                :name="field.name"
-                :type="field.type"
-                :required="field.required"
-                :value="field.value"
+                v-if="field.attributes.type != 'submit'"
+                :name="field.attributes.name"
+                :type="field.attributes.type"
+                :required="field.attributes.required"
+                :value="field.attributes.value"
                 class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                :placeholder="field.name"
+                :placeholder="field.attributes.name"
               />
+              <div>
+                <span class="text-red-500">{{field.attributes.messages}}</span>
+              </div>
             </div>
-          </div>
-
-          <div v-for="message in messages" :key="message" class="text-red-500">
-            {{message.text}}
           </div>
         </div>
 
@@ -38,6 +38,8 @@
           <button
             type="submit"
             class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            value="password"
+            name="method"
           >
             <span class="absolute left-0 inset-y-0 flex items-center pl-3">
               <!-- Heroicon name: solid/lock-closed -->
@@ -77,10 +79,9 @@ export default {
   },
   created() {
     initializeLoginFlow().then(response => {
-      let passwordConfig = response.methods.password.config;
+      let passwordConfig = response.ui;
       this.action = passwordConfig.action;
-      this.fields = passwordConfig.fields;
-      this.messages = passwordConfig.messages;
+      this.fields = passwordConfig.nodes;
     }).catch(error => {
       console.log(error);
     })

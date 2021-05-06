@@ -8,25 +8,25 @@
         <div class="flex rounded-md shadow">
           <router-link
             v-if="!authed"
-            to="/auth/login"
+            to="/login"
             class="inline-flex items-center justify-center px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none">
             Login
           </router-link>
           <router-link
             v-if="!authed"
-            to="/auth/registration"
+            to="/registration"
             class="inline-flex items-center justify-center px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none">
             Registration
           </router-link>
           <router-link
             v-if="authed"
-            to="/auth/logout"
+            to="/logout"
             class="inline-flex items-center justify-center px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none">
             Logout
           </router-link>
           <router-link
             v-if="authed"
-            to="/auth/settings"
+            to="/settings"
             class="inline-flex items-center justify-center px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none">
             Settings
           </router-link>
