@@ -10,7 +10,7 @@
   "dependencies": {
     "vue": "^3.0.11",
     "vue-router": "^4.0.6",
-    "@ory/kratos-client": "0.0.0-next.b7b69098fd89"
+    "@ory/kratos-client": "0.0.0-next.4a0d7f3600f6"
   },
   "devDependencies": {
     "@headlessui/vue": "^1.1.1",
