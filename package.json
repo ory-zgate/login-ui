@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "vue": "^3.1.1",
-    "vue-router": "^4.0.10",
+    "vue-router": "^4.0.11",
     "@ory/kratos-client": "0.6.0-alpha.2"
   },
   "devDependencies": {
